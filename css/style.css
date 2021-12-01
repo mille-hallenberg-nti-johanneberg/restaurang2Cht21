@@ -1,3 +1,105 @@
-body {
-  background:grey;
+body
+{
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+
+    overflow:hidden;
+}
+
+#mainContainer
+{
+    display: grid;
+    
+    width: 100%;
+    height: 100%;
+    
+    grid-template-rows: 20% 10% 60% 10%;
+    grid-template-columns: 100%;
+    
+    grid-template-areas: 
+    "hd"
+    "nv"
+    "pt"
+    "ft"
+    ;
+}
+
+#containerInContainer
+{
+    display: grid;
+
+    background-image: url("../img/food.jfif");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    width: 100%;
+    height: 100%;
+
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+
+    grid-template-areas:
+    "ig if"
+    ;
+}
+
+#menuContainer
+{
+    display: grid;
+
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 100%;
+
+    grid-template-areas: 
+    "m1 m2 m3 m4";
+}
+
+form
+{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    height: 2rem;
+    width:10rem;
+}
+
+nav.navigation
+{
+    display: flex;
+    grid-area: nv;
+    background-color: lightblue;
+    justify-content: center;
+    /* border-color: blue; */
+}
+
+#restaurangInfo
+{
+    grid-area: pt;
+    background-color: rgb(73, 73, 73);
+}
+
+#restaurangNamn
+{
+    grid-area: hd;
+    align-self: center;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 2rem;
+    background-color: lightgoldenrodyellow;
+}
+
+p.boxText
+{
+    width: 50%;
+    padding:1rem;
+    background-color: lightgray;
+    border-radius: 0.5rem;
+}
+
+footer
+{
+    grid-area: ft;
+    background-color: rgb(150, 150, 56);
 }
